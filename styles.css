@@ -1,0 +1,21 @@
+/* Hide the actual checkbox, but it's still functional */
+.toggle-input {
+    display: none;
+}
+
+/* Style for the label which acts as a toggle button */
+.toggle-label {
+    cursor: pointer;
+    /* Additional styling for label (size, position, etc.) */
+}
+
+.side-panel {
+    transform: translateX(-100%); /* Panel is initially off-screen */
+    transition: transform 0.5s ease-in-out;
+    /* Additional styling for the panel (width, height, background, etc.) */
+}
+
+/* When checkbox is checked, move the panel into view */
+.toggle-input:checked + .side-panel {
+    transform: translateX(0); /* Slide in the panel */
+}
